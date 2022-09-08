@@ -10,4 +10,4 @@
 2. Go to client-calendar dir, run:
 ### `npm start`
 
-# Notes: Harus register dulu (pakai email asli yang aktif, kalo bisa google, coba yang laing juga boleh), kalo engga datanya nyangkut di DB (blm kehandle)
+# Notes: Harus register dulu (pakai email asli yang aktif, kalo bisa gmail, coba yang lain juga boleh), kalo engga datanya nyangkut di DB (blm kehandle)
