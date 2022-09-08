@@ -13,7 +13,7 @@ const verifyEmail = (obj) => {
         from: 'fp.zurichfox@gmail.com',
         to: `${obj.email}`,
         subject: `TODO Welcome Email`,
-        html: `<p>Please verify your email, <a href="http://localhost:3001/Users/verify/${obj.token}">Click here!<a/><p>`
+        html: `<p>Please verify your email, <a href="http://localhost:3000/verified/${obj.token}">Click here!<a/><p>`
     };
 
     transporter.sendMail(mailOptions, function (error, info) {
