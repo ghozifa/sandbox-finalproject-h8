@@ -11,23 +11,23 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Task.belongsTo(models.User);
-      Task.belongsTo(models.Project);
+      // Task.belongsTo(models.Project);
       // define association here
     }
   }
   Task.init({
-    ProjectId: {
-      allowNull: false,
-      type: DataTypes.INTEGER,
-      validate: {
-        notNull: {
-          msg: "ProjectId is required"
-        },
-        notEmpty: {
-          msg: "ProjectId is required"
-        }
-      }
-    },
+    // ProjectId: {
+    //   allowNull: false,
+    //   type: DataTypes.INTEGER,
+    //   validate: {
+    //     notNull: {
+    //       msg: "ProjectId is required"
+    //     },
+    //     notEmpty: {
+    //       msg: "ProjectId is required"
+    //     }
+    //   }
+    // },
     UserId: {
       allowNull: false,
       type: DataTypes.INTEGER,
@@ -52,27 +52,39 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     },
-    name: {
+    title: {
       allowNull: false,
       type: DataTypes.STRING,
       validate: {
         notNull: {
-          msg: "Task name is required"
+          msg: "Title name is required"
         },
         notEmpty: {
-          msg: "Task name is required"
+          msg: "Title name is required"
         }
       }
     },
-    deadline: {
+    date: {
       allowNull: false,
       type: DataTypes.STRING,
       validate: {
         notNull: {
-          msg: "Deadline is required"
+          msg: "Date is required"
         },
         notEmpty: {
-          msg: "Deadline is required"
+          msg: "Date is required"
+        }
+      }
+    },
+    color: {
+      allowNull: false,
+      type: DataTypes.STRING,
+      validate: {
+        notNull: {
+          msg: "Color is required"
+        },
+        notEmpty: {
+          msg: "Color is required"
         }
       }
     }

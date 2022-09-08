@@ -12,9 +12,9 @@ const sendEmail = (obj) => {
     var mailOptions = {
         from: 'fp.zurichfox@gmail.com',
         to: `${obj.email}`,
-        subject: `${obj.subject}`,
-        // text: `Hello, ${obj.username}! Welcome to our app!`
-        html: `${obj.body}`
+        subject: `TODO Welcome Email`,
+        html: `<h1>WELCOME</h1>
+        <p>Hello, ${obj.username}! Welcome to our app!</p>`,
     };
 
     transporter.sendMail(mailOptions, function (error, info) {

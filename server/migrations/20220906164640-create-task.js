@@ -8,16 +8,16 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      ProjectId: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-        references: {
-          model: "Projects",
-          key: "id"
-        },
-        onDelete: "cascade",
-        onUpdate: "cascade"
-      },
+      // ProjectId: {
+      //   allowNull: false,
+      //   type: Sequelize.INTEGER,
+      //   references: {
+      //     model: "Projects",
+      //     key: "id"
+      //   },
+      //   onDelete: "cascade",
+      //   onUpdate: "cascade"
+      // },
       UserId: {
         allowNull: false,
         type: Sequelize.INTEGER,
@@ -30,14 +30,17 @@ module.exports = {
       },
       status: {
         allowNull: false,
-        defaultValue: "Unprogress",
         type: Sequelize.STRING
       },
-      name: {
+      title: {
         allowNull: false,
         type: Sequelize.STRING
       },
-      deadline: {
+      date: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      color: {
         allowNull: false,
         type: Sequelize.STRING
       },

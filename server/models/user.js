@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       User.hasMany(models.Task);
-      User.belongsToMany(models.Project, {through: models.UserProjects, foreignKey: "UserId"});
+      User.belongsToMany(models.Project, {through: models.UserProject, foreignKey: "UserId"});
     }
   }
   User.init({
@@ -61,14 +61,38 @@ module.exports = (sequelize, DataTypes) => {
           msg: "Password is required"
         }
       }
+    },
+    status: {
+      allowNull: false,
+      type: DataTypes.STRING,
+      validate: {
+        notNull: {
+          msg: "Status is required"
+        },
+        notEmpty: {
+          msg: "Status is required"
+        }
+      }
+    },
+    token: {
+      allowNull: false,
+      type: DataTypes.STRING,
+      validate: {
+        notNull: {
+          msg: "Token User is required"
+        },
+        notEmpty: {
+          msg: "Token User is required"
+        }
+      }
     }
   }, {
     sequelize,
     modelName: 'User',
   });
   User.beforeCreate((user, option) => {
-    user.password = hashPassword(el.password);
+    user.password = hashPassword(user.password);
   });
-  
+
   return User;
 };
