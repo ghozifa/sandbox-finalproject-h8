@@ -35,7 +35,7 @@ function ConfirmPage() {
           <p className="font-normal text-gray-700">
            {message}
           </p>
-          {!error ? (<Link to="/">Go To HomePage</Link>) : null}
+          {!error ? (<Link to="/" className="bg-green-500 text-white">Home Page</Link>) : null}
         </a>
       </div>
     </div>
