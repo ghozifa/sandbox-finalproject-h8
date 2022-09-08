@@ -12,4 +12,4 @@
 
 # Notes:   
 ### 1.  `npm i` di setiap folder
-### 2. folder Harus register dulu (pakai email asli yang aktif, kalo bisa gmail, coba yang lain juga boleh), kalo engga datanya nyangkut di DB (blm kehandle)
+### 2.  harus register dulu dari client (pakai email asli yang aktif, kalo bisa gmail, coba yang lain juga boleh), kalo engga datanya nyangkut di DB (blm kehandle)
