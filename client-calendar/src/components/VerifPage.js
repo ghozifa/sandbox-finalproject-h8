@@ -33,9 +33,9 @@ function ConfirmPage() {
             TODO APP
           </h5>
           <p className="font-normal text-gray-700">
-           {message}
+           {message}, Please Login first
           </p>
-          {!error ? (<Link to="/" className="bg-green-500 text-white">Home Page</Link>) : null}
+          {!error ? (<Link to="/login" className="bg-green-500 text-white">Login Page</Link>) : null}
         </a>
       </div>
     </div>
