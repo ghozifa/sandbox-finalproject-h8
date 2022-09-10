@@ -39,6 +39,7 @@ class UserController {
       // Send Email Verification
       await verifyMail({
         email: register.email,
+        username: register.username,
         token,
       });
 
